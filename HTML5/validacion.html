@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Atributos y Validación en HTML</title>
+</head>
+<body>
+    
+     <form action="">
+          <!-- Atributos de input -->
+
+          <!-- le digo que quiero que escriba -->
+          <input type="text" placeholder="Inserte texto">
+          
+          <!-- le digo que quiero aqui seeleccione primero y escriba-->
+          <input type="text" autofocus>
+          
+         <!-- le digo que me complemente y con off que no me muestre sugerencias --> 
+          <input type="text" autocomplete="off">
+          
+          <!-- le digo que puede elegir varios elementos -->
+          <select multiple>
+               <option value="">Elemento 1</option>
+               <option value="">Elemento 2</option>
+               <option value="">Elemento 3 </option>
+          </select>
+     
+          <hr>
+          <br>
+     
+
+
+          <!-- Validación -->
+
+          <!-- tiene que ser requerido este campo -->
+          <input type="text" required>
+          
+          <!-- input de texto que esta desabilitado -->
+          <input type="text" disabled>
+          
+          <!-- Validación que no me deja borrar y est texto siempre se va enviar -->
+          <input type="text" readonly value="Texto escrito por usuario">
+          
+        <!-- un input numerico de minimo de 5 y maximo 20 -->
+          <input type="number" min="5" max="20" placeholder="5 al 20" title="Numeros del 5 al 20">
+          
+          <!-- un input de caracter que sean minimo de 5 caracteres y maximo 8-->
+          <input type="password" placeholder="Contraseña" minlength="5" maxlength="8">
+
+          <!-- un input con un patron con pattern quiero 2 caracteres de la a la z y 3 caracteres de 0 a 9 -->
+          <input type="text" pattern="[A-Z]{2}[0-9]{3}" placeholder="Patron" title="Dos letras y tres numeros">
+     
+          <!-- envia -->
+          <input type="submit">
+     </form>
+</body>
+</html>
