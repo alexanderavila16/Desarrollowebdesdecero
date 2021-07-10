@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Posicionamiento CSS</title>
+
+    <style>
+      * {
+        font-family: arial;
+      }
+
+      article {
+        border: 1px solid red;
+        margin-bottom: 100px;
+      }
+
+      div {
+        width: 200px;
+        height: 200px;
+        margin: 10px;
+        border: 1px solid blue;
+        line-height: 200px;
+        text-align: center;
+      }
+
+      
+          /*DESPLIEGUE EN BLOQUE*/
+          .bloque div{		
+              /* despliegue en bloque 				 */
+               display: block;
+		}
+
+
+          /*DESPLIEGUE EN LINEA*/
+          .enlinea div{
+              /* me lo pone al lado   */
+               display: inline;
+               /* me lo pone uno al lad del otro en bloque de linea  */
+               display: inline-block;
+		}
+
+
+          /*DESPLIEGUE EN TABLA*/
+		.entable div{
+            /* me los coloca como una tabla  */
+               display: table-cell;
+		}
+
+
+
+
+      /*POSICIONAMIENTO RELATIVO*/
+      #relativo {
+          /* me lo pone relativo y lo puedo mover donde quiera  */
+          position: relative;
+          /* como ya tienemi pocision relativa ahora puedo moverlo 
+          como yyo quiera como 300px a la derecha */
+          left: 300px;
+          /* abajo me lo mueve  */
+          /* top: 50px; */
+
+        
+      }
+
+      /*POSICIONAMIENTO ABSOLUTO*/
+      #absoluto {
+        position: absolute;
+        /* con este pocisionamiento me tiene en cuenta al padre  */
+        right: 50px;
+      }
+
+      /*POSICIONAMIENTO FIJO*/
+      #fijo {
+          /* va estar e una pocision fija sin tomar en cuenta nada  */
+        /* position: fixed;
+        background: blue;
+        right: 100px;
+        top: 200px; */
+
+        
+      }
+
+      /*POSICIONAMIENTO FLOTANTE*/
+      .flotante {
+          height: 400px;
+          width: 100%;
+       
+      }
+
+      .flotante div {
+          /* me coloca uno al lado del otro  */
+          float: left;
+       
+      }
+
+      .flotante div:nth-child(2) {
+          /* el segundo se va a la dderecha  */
+          float: right;
+        
+      }
+    </style>
+  </head>
+  <body>
+    <h1>ELEMENTOS EN BLOQUE</h1>
+    <article class="bloque">
+      <div>UNO</div>
+      <div>DOS</div>
+      <div>TRES</div>
+      <div>CUATRO</div>
+    </article>
+
+    <h1>ELEMENTOS EN LINEA</h1>
+    <article class="enlinea">
+      <div>UNO</div>
+      <div>DOS</div>
+      <div>TRES</div>
+      <div>CUATRO</div>
+    </article>
+
+    <h1>ELEMENTOS EN TABLA</h1>
+    <article class="entable">
+      <div>UNO</div>
+      <div>DOS</div>
+      <div>TRES</div>
+      <div>CUATRO</div>
+    </article>
+
+    <h1>POSICIONAMIENTO</h1>
+    <article class="posicionamiento">
+      <div id="relativo">RELATIVO</div>
+      <div id="absoluto">ABSOLUTO</div>
+      <div id="fijo">FIJO</div>
+    </article>
+
+    <h1>POSICIONAMIENTO FLOTANTE</h1>
+    <article class="flotante">
+      <div>PRIMER</div>
+      <div>SEGUNDO</div>
+      <div>TERCERO</div>
+    </article>
+  </body>
+</html>
