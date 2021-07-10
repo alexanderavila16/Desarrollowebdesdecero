@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fondos CSS</title>
+
+    <style>
+        #contenedor {
+            margin: auto;
+            width: 500px;
+            height: 500px;
+            border: 1px solid #000;
+
+            /*FONDO PLANO*/
+            background: #039cb1;
+            background: rgba(146, 11, 11, 0.5);
+            /*FONDO DEGRADADOS O GRADIENTES*/
+            background: linear-gradient(90deg, blue, orange);
+            background: radial-gradient(orange, green);
+
+            /*IMAGEN DE FONDO*/
+/* 
+            background-image: url(archivos/fondo1.png);
+            background-repeat: no-repeat;
+            /* con scroll me organiza la imagen cuando baja o con fixed */
+            /* background-attachment: scroll;
+            background-position: center; */
+            /* me permite que cubra todo ese cuadro */
+            
+            /* todo junto */
+            background: black url(archivos/fondo1.png) no-repeat scroll center; 
+            /* me permite que cubra todo ese cuadro */
+            background-size: cover;
+
+        }
+
+        .contenido {
+            width: 100%;
+            height: 100px;
+            background-color: rgba(23, 122, 235, 0.5);
+
+
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="contenedor">
+        <div class="contenido"></div>
+    </div>
+
+    <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p> -->
+
+</body>
+
+</html>

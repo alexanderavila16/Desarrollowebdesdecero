@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="archivos/fontawesome/css/all.css">
+    <title>Document</title>
+  </head>
+
+  <style>
+      table{
+          /* al hacer auto va estar centrada en mi web  */
+          margin: auto;
+          margin-top: 50px;
+          text-align: center;
+          font-family: Arial, Helvetica, sans-serif;
+          font-size: 16px;
+          /* me rediseña bien la tabla se me alinea  */
+          border-collapse: collapse;
+    }
+    /* puedo aplicarle estilos a multiples elementos de mi tabla  */
+    table th,table td{
+        /* les pongo un borde a toda mi tabla  */
+        border: 1px solid #dee2e6;
+        /* pongo mas amplio mis elemetos para que no se vean tan pegados  */
+        padding: 5px 10px;
+    }
+    /* aplicamos estilos a mi th fila id nombre etcy aplico estilo 
+    a la primera columna*/
+    table th,table td:first-child{ 
+        background-color: #17a2b8;
+        color: #fff;
+        /* ancho de las letras  */
+        font-weight: 600 ;
+        /* ancho s */
+        width: 100px;
+    }
+    /* estoy entrando a mi tabla, entrando a mis td y dentro de ese td a mis span  */
+    table td span {
+        /* separo mis iconos  */
+        margin-right: 15px;
+        font-size: 17px;
+        /* me aparece una manito  */
+        cursor: pointer;
+
+
+    }
+
+    /* cuando selecciono uno de mis iconoces me hace un hover  */
+    table td span:hover {
+        opacity: 0.7;
+    }
+
+    /* aplicamos estilos al primer hijo de mi span con nth-child  */
+    table td span:nth-child(1){
+        color: #17a2b8;
+    }
+
+    table td span:nth-child(2){
+        color: #28a745;
+    }
+
+    table td span:nth-child(3){
+        color: #dc3545;
+        margin-right: 0px;
+    }
+    /* llamame a los hijos que sean impares  */
+    table tr:nth-child(odd){
+        background-color: rgba(0, 0,0, 0.05);
+    }
+
+    table tr:hover{
+        background-color: rgba(0, 0,0, 0.1);
+    }
+
+
+   
+
+    }
+  </style>
+
+
+  <body>
+    <table>
+      <thead>
+        <!-- mis filas con tr -->
+        <tr>
+          <!-- mis columnas con th  -->
+          <th>ID</th>
+          <th>Nombre</th>
+          <th>Apellido</th>
+          <th>Correo</th>
+          <th>Opciones</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <!-- mis filas con tr -->
+        <tr>
+          <!-- mis columnas con td  -->
+          <td>123456</td>
+          <td>Alex</td>
+          <td>Avila</td>
+          <td>xxx@gmail.com</td>
+          <td>
+            <span class="fas fa-info-circle"></span
+            ><span class="fas fa-edit"></span
+            ><span class="fas fa-trash-alt"></span>
+          </td>
+        </tr>
+
+        <tr>
+            <!-- mis columnas con td  -->
+            <td>123456</td>
+            <td>Alex</td>
+            <td>Avila</td>
+            <td>xxx@gmail.com</td>
+            <td>
+              <span class="fas fa-info-circle"></span
+              ><span class="fas fa-edit"></span
+              ><span class="fas fa-trash-alt"></span>
+            </td>
+          </tr>
+
+          <tr>
+            <!-- mis columnas con td  -->
+            <td>123456</td>
+            <td>Alex</td>
+            <td>Avila</td>
+            <td>xxx@gmail.com</td>
+            <td>
+              <span class="fas fa-info-circle"></span
+              ><span class="fas fa-edit"></span
+              ><span class="fas fa-trash-alt"></span>
+            </td>
+          </tr>
+
+          <tr>
+            <!-- mis columnas con td  -->
+            <td>123456</td>
+            <td>Alex</td>
+            <td>Avila</td>
+            <td>xxx@gmail.com</td>
+            <td>
+              <span class="fas fa-info-circle"></span
+              ><span class="fas fa-edit"></span
+              ><span class="fas fa-trash-alt"></span>
+            </td>
+          </tr>
+
+          <tr>
+            <!-- mis columnas con td  -->
+            <td>123456</td>
+            <td>Alex</td>
+            <td>Avila</td>
+            <td>xxx@gmail.com</td>
+            <td>
+              <span class="fas fa-info-circle"></span
+              ><span class="fas fa-edit"></span
+              ><span class="fas fa-trash-alt"></span>
+            </td>
+          </tr>
+
+          <tr>
+            <!-- mis columnas con td  -->
+            <td>123456</td>
+            <td>Alex</td>
+            <td>Avila</td>
+            <td>xxx@gmail.com</td>
+            <td>
+              <span class="fas fa-info-circle"></span
+              ><span class="fas fa-edit"></span
+              ><span class="fas fa-trash-alt"></span>
+            </td>
+          </tr>
+
+
+
+
+      </tbody>
+    </table>
+  </body>
+</html>

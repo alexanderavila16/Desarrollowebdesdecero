@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Fonts CSS</title>
+     
+
+     <!-- Con este enlace llamo desde google mi fuente -->
+     <!-- <link href="<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">" -->
+     
+     <!-- puedo descargar una font de fontawesome y cargarlo en nuestro html -->
+     <!-- <link rel="stylesheet" href="archivos/fontawesome/css/all.css"> -->
+
+    <style>
+          /* Fuentes Basicas */
+        h1{
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+
+          /* Fuentes externas */
+
+          /* puedo importar desde google la fuente mas directa */
+         @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
+        p{
+            /* copio el css de google y lo pego */
+            font-family: font-family 'Noto Sans JP', sans-serif;
+        }
+
+          /* Fuentes descargadas*/ 
+
+          /* puedo descargar la fuente y cargarla desde mi pc */
+          @font-face {
+               font-family: 'Comic Neue', cursive;
+               src: url(archivos/ComicNeue-Regular.ttf);
+          }
+
+          p{
+               font-family: 'Comic Neue', cursive;   
+          }
+
+     </style>
+</head>
+<body>
+     
+     <h1>Este es mi nuevo texto</h1>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+     proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+     <br>
+
+
+        <!-- podemos llamar un icono desde fontawesome -->
+     <i class="fas fa-align-justify"></i>
+
+
+
+
+
+</body>
+</html>

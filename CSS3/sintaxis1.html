@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Sintaxis CSS3</title>
+
+     <style>
+          h1{ /* selector base y llamo al elemento */
+               color: blueviolet;
+          }
+
+          #primerparrafo{  /* es un elemento unico y lo llamo en p como id=promerparrafo */
+              color: green;
+
+          }
+
+          .grupoparrafos{ /* es una clase y puedo aplicar multiples estilos lo llamo con class="" */
+              color: blue;
+          }
+
+          h1:hover{ /*trabajo coon eventos cuando coloco el mouse se activa un hover a h1*/
+            color: black;
+          }
+
+          input[type="text"]{ /*aplico estilos a mis input de tipo texto*/
+              background: blue;
+          }
+
+          *{
+              color: red !important; /*coloco important esto es importante y se lo aplico a todo*/
+          }
+
+
+
+     </style>
+
+
+
+</head>
+<body>
+     
+     <h1>Titulo de mi pagina</h1>
+     <p id="primerparrafo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam molestiae dolorem necessitatibus quas quod, omnis numquam. Repellendus neque nemo cupiditate laudantium hic, nisi soluta error deleniti fuga aut rerum fugit.</p>
+
+     <p class="grupoparrafos">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit dicta id fugiat vel obcaecati assumenda facilis officia error magni! Impedit rem illum sint quod aspernatur expedita, eius labore. Velit, obcaecati?</p>
+
+     <p class="grupoparrafos">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis harum officia adipisci cumque molestias odit assumenda non veniam. Hic nostrum cum dolores ipsum culpa fugiat atque inventore pariatur suscipit sapiente!</p>
+
+     <input type="text">
+     <input type="number">
+
+     
+
+</body>
+</html>
