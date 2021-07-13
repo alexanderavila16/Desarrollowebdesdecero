@@ -1,0 +1,19 @@
+.grid{
+	display: grid;
+     grid-gap: 20px;
+     /* le doy un alto  */
+     height: 800px;
+	grid-template-columns: repeat(3, 100px);
+	grid-template-rows: repeat(3, 100px);
+
+
+     /*Alinear Horizontalmente*/
+     /* tengo el mismo espaciado  */
+     justify-content: space-evenly;
+
+
+     /*Alinear Verticalmente*/
+     align-content: space-evenly;
+    
+	
+}

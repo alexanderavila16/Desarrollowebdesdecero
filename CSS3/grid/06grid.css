@@ -1,0 +1,28 @@
+.grid {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 100px 1fr 100px;
+    grid-template-rows: 100px 200px 100px ;
+    /* specificarle un tamaño a todos esoss elementos  */
+    /* grid-auto-rows: 300px; */
+    /* me lo desliega en columnas mi flujo de elementos */
+    /* grid-auto-flow: column; */
+
+    /* el me va llnar esos espacios de mis bloques y no dejar esoacios e blancos  */
+    grid-auto-flow: dense;
+
+
+}
+
+.grid .span2{
+    background: #8a3bb5;
+    /* me lo expande 2 columnas  */
+    grid-column: span 2;
+}
+
+.grid .span3{
+    background: #00fc82;
+    /* me lo expande 3 columnas */
+    grid-column: span 3;
+}
+

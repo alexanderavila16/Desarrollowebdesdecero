@@ -1,0 +1,32 @@
+/* trabajare con unn grid  */
+.grid{
+    /* voy a trabajar con un grid  */
+    display: grid;
+    /* las columnas la divimos por 1fraccion , la otra columna de 2 fracciones  */
+    /* grid-template-columns: 1fr 2fr 1fr ; */
+    /* fila de 1 fraccion la segunda de 2 fracciones  */
+    /* grid-template-rows: 1fr 2fr; */
+    /* coloco un valor un minimovalor maximo en mi 1,2 y 3 columna , 200px es mi maximo el minimo es 1c fraccion y de 3 valor de 1fraccion
+     */
+    /* grid-template-columns: minmax(200px, 1fr) 1fr; */
+    /* con auto me acmoda odo mii conteido de acuerdo a mi cajita  */
+    /* grid-template-rows: minmax(200px, auto); */
+
+    /* diseño de 6 columnas  */
+    /* grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr; */
+    /* repita 6 columnas y quiero cada una de una fraccion */
+    /* grid-template-columns: repeat(6, 1fr); */
+    /* quiero mi primera columna de 300px y las demas 6 de 1fr  */
+    grid-template-columns: 300px repeat(6, 1fr);
+    grid-gap: 20px;
+
+
+
+    /* defiimos la columnas 100px a mi primera columna 200 a la segunda  */
+    /* grid-template-columns: 100px 200px 100px; */
+    /* definimos las fillas 200px la primera fila y 300px la segunda  */
+    /* grid-template-rows:200px 300px; */
+
+
+    grid-gap: 20px;
+}

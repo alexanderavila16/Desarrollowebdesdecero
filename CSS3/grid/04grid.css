@@ -1,0 +1,29 @@
+.grid{
+	display: grid;
+	grid-gap: 20px;
+	grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 200px);
+
+
+     /* ALINEACION HORIZONTAL */
+     /* me alinea los elementos de forma horizontal  */
+        justify-items: center;
+        /* me alinea los elementos de forma vertical s */
+        align-items: center;
+
+
+
+     /* ALINEACION VERTICAL */
+   
+}
+
+.grid .elemento {
+    background: #8a3bb5;
+    /* me va permitir alinear este unico elemento de forma horizontal  */
+    justify-self: start ;
+    /* me va permitiralnearlo de forma vertical  */
+    align-self: start;
+
+}
+
+

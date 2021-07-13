@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Transformaciones CSS3</title>
+
+     <style>
+          div{
+               width: 200px;
+               height: 200px;
+               margin: 50px;
+               float: left;
+          }
+
+          #transladar{
+			background: #1aa9ed;
+            /* te quiero transladar en el eje x 50px y 320px en el ejey*/
+            /* transform: translateX(50px) translateY(320px); */
+           /* eje x -50px y 320 en el eje y  */
+            transform: translate(-50px, 320px);
+             
+		}
+
+		#escalar{
+			background: #00dd73;
+            /* aumenta su tamaño 4 veces en el eje x  y en el eje y 2*/
+            /* transform: scaleX(4) scaleY(2); */
+            /* junto las 2 eje x 1 y eje y 2  */
+            transform: scale(1,2);
+               
+		}
+
+		#rotar{
+			background: #ef7f1a;
+            /* transform: rotateX(120deg) rotateY(50deg); */
+            transform: rotate(150deg);
+               
+		}
+
+		#deformar{
+			background: #d1308c;
+            /* transform: skewX(20deg) skewY(20deg); */
+            transform: skew(10deg);
+             
+		}
+     </style>
+</head>
+<body>
+     <div id="transladar"></div>
+
+     <div id="escalar"></div>
+
+     <div id="rotar"></div>
+
+     <div id="deformar"></div>
+</body>
+</html>

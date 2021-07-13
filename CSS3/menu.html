@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+    <title>Menu CSS3</title>
+
+    <style>
+         *{
+           margin: 0;
+              padding: 0;
+              font-family: 'Varela Round', sans-serif;
+
+         }
+
+         header{
+             /* le digo flex porque quiero estos elementos flexibles
+             y me lo coloca al lado de la imgen  y no abajo */
+             display: flex;
+             /* quiero que tenga un espacio entre ellos  */
+             justify-content: space-around;
+             /* me lo ubica en el centro  */
+             align-items: center;
+             /* un padding superior yy inferior para que no este cerca tan arriba y abajo
+             y 0 a los lados   */
+             padding: 10px 0px;
+             /* me pone un borde a toda mi caja  */
+             border-bottom: 1px solid #dedede;
+            /* le  coloco un margen abajo para mostrar los otrs menus  */
+             margin-bottom: 100px;
+
+        }
+
+
+        li{
+            /* con esto me pone los elementos uno al lado del otro   */
+            display: inline-block;
+            /* separa los elementos a los lados  */
+            padding: 0px 20px;
+            /* quitarle el estilo de liste que no se ve pero esta alli  */
+            list-style: none;
+
+        }
+
+        a{
+            /* tamaño de fuente de 14  */
+            font: 14px;
+            /* me quita la linea de enlace  */
+            text-decoration: none;
+            /* me pone las letras en mayusculas  */
+            text-transform: uppercase;
+            /* negrilla */
+            font-weight: 700;
+            /* color de letras  */
+            color: #4a3866;
+            /* una transicion del color de cursor mas suave  */
+            transition: all 0.3s;
+
+        }
+        /* con esto paso el cursor en enlace y me lo ilumina de un color  */
+        a:hover {
+            color: #ff2753;
+
+        }
+
+
+         .logo{
+            width: 200px;
+            cursor: pointer;
+
+
+         }
+
+         .btn{
+             /* un padding arriba y abajo de 10 y a los lados de 25   */
+             padding: 10px 25px;
+            background-color: #ff2753;
+            /* un radio que paresca un boton  */
+            border-radius: 50px;
+            color: #fff;
+
+
+         }
+         /* cundo pase el cursos al boton haga esto  */
+         .btn:hover{
+             background-color: #4a3866;
+             color: #fff;
+         }
+
+         /* MENU 2  */
+         .menu2{
+             /* le pone un padding a las esquinas con 5%  */
+             padding: 10px 5%;
+
+         }
+
+         .menu2 .logo{
+             /* me pone los textos a la esquina  */
+             margin-right: auto;
+
+         }
+
+         .menu2 .btn{
+             /* me lo pone mas a la izquirda del boton login  */
+            margin-left: 20px;
+
+
+         }
+
+        /* MENU 3  */
+
+        .menu3 .logo{
+            /* invierto en la pocision en 2s  */
+
+            order: 2;
+
+        }
+        .menu3 nav{
+            /* invierto en la pocision en 1  */
+
+            order:1;
+
+
+        }
+
+        .menu3 .btn{
+            /* invierto en la pocision en 0  */
+            order: 0;
+
+        }
+
+
+
+
+
+
+    </style>
+
+
+</head>
+<body>
+    <header>
+        <img src="archivos/logo.png" alt="" class="logo">
+        <nav>
+            <ul>
+                <li><a href="">Nosotros</a></li>
+                <li><a href="">Servicios</a></li>
+                <li><a href="">Portafolio</a></li>
+                <li><a href="">Multimedia</a></li>
+                <li><a href="">Contacto</a></li>
+
+            </ul>
+        </nav>
+        <a href="" class="btn">Login</a>
+    </header>
+
+    <header class="menu2">
+        <img src="archivos/logo.png" alt="" class="logo">
+        <nav>
+            <ul>
+                <li><a href="">Nosotros</a></li>
+                <li><a href="">Servicios</a></li>
+                <li><a href="">Portafolio</a></li>
+                <li><a href="">Multimedia</a></li>
+                <li><a href="">Contacto</a></li>
+
+            </ul>
+        </nav>
+        <a href="" class="btn">Login</a>
+    </header>
+
+    <header class="menu3">
+        <img src="archivos/logo.png" alt="" class="logo">
+        <nav>
+            <ul>
+                <li><a href="">Nosotros</a></li>
+                <li><a href="">Servicios</a></li>
+                <li><a href="">Portafolio</a></li>
+                <li><a href="">Multimedia</a></li>
+                <li><a href="">Contacto</a></li>
+
+            </ul>
+        </nav>
+        <a href="" class="btn">Login</a>
+    </header>
+
+
+
+
+    
+</body>
+</html>

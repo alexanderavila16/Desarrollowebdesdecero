@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Transiciones CSS3</title>
+
+     <style>
+          div{
+			width: 200px;
+			height: 200px;
+			margin: 70px;
+               float: left;
+		}
+
+		.elemento1{
+			background: #1aa9ed;
+		}
+        /* cuando doy click has esto  */
+		.elemento1:hover{
+			transform: rotate(130deg);
+			background: blue;
+		}
+
+		.elemento-transicion{
+			background: #00dd73;
+            /* toda esa transicion me lo haga y afecta todas las propiedades  */
+            transition-property: all;
+            /* cuanto va durar mi transicion  */
+            transition-duration: 1s;
+            /* el retraso d mi transicion */
+            /* transition-delay: 1s; */
+            /* misa veocidad de iniicio y final  */
+            /* transition-timing-function: linear; */
+            /* inicia lento despues va rapido y termina lento  */
+            /* transition-timing-function: ease; */
+            /* transition-timing-function: ease-in; */
+            /* transition-timing-function: ease-out; */
+            /* transition-timing-function: ease-in-out; */
+
+
+             
+	
+               /* ATAJO - propiedad - duracion - timming - delay*/
+               transition: all 1s ease-out 0.3s;
+			
+		
+			/*
+				transition-property: Propiedad a la que se aplica.
+               	transition-duration: Duracion de la transicion.
+               	transition-delay: Retraso al iniciar
+				transition-timing-function: Velocidad en ejecutarse
+			*/
+		}
+
+		.elemento-transicion:hover{
+			background: green;
+            transform: rotate(130deg);
+			
+		}
+     </style>
+</head>
+<body>
+     <div class="elemento1">
+     </div>
+     
+     
+     <div class="elemento-transicion">
+     </div> 
+</body>
+</html>

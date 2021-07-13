@@ -1,0 +1,9 @@
+.grid{
+    display: grid;
+    grid-gap: 20px;
+    /* me va rellenar toda las filas con columnas que pueda colocar con autofill */
+    /* grid-template-columns: repeat(auto-fill, minmax(100px,1fr)); */
+
+    /* el va reellear la fila cuando tenga pocos elementos  */
+    grid-template-columns: repeat(auto-fit, minmax(100px,1fr));
+}

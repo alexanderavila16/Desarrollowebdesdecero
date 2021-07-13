@@ -1,0 +1,48 @@
+.grid{
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(4, auto);
+    /* en mi primera fila se va mostrar el header, en la segunda el header y la tercera el header 
+    yo estoy armndo mi paguina web como quiero que se vea  */
+    grid-template-areas: "header header header"  "sidebar1 contenido sidebar2" "sidebar1 widget sidebar2" "footer footer footer";
+
+}
+
+.grid .header {
+
+    background: #ff8000;
+    /* vas a ir desde que iniial el header hasta que termina el header  */
+    grid-column-start:  header;
+    grid-column-end: header;
+}
+
+.grid .sidebar1{
+    background: #00db54;
+    /* quiero me ocupe el sidebar 1 y el sidebar de abajo de mi columna y fila me las une  */
+    grid-column: sidebar1;
+    grid-row: sidebar1;
+}
+
+.grid .contenido {
+    background: #dedede;
+    color: #000;
+    grid-area: contenido;
+}
+
+.grid .sidebar2{
+    background: #00db54;
+    /* me unee conn mi otro sidebar 2  y quero donde el vaya */
+    grid-area: sidebar2;
+}
+
+.grid .widget {
+    background: #ff8000;
+    grid-area: widget;
+}
+
+.grid .footer {
+    background: #222831;
+    /* quiero que vaya donde este los nombres dee foooter  */
+    grid-area: footer;
+}

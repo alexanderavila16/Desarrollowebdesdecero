@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Formulario CSS3</title>
+
+     <style>
+          *{
+			font-family: arial;
+		}
+        form{
+            background-color: #333;
+            /* un ancho a todo el form de 30% */
+            width: 30%;
+            /* un alto d 400px */
+            height: 400px;
+            /* me aparesca en en centro  */
+            margin: auto;
+            /* un espacio arriba de 50px  */
+            margin-top: 50px;
+            /* para que me separe los elementos de adentro de 30px */
+            padding: 30px;
+            /* me pone un borde en tdo el form */
+            border: 20px solid #222;
+            /* desbloqueo para que sean flexibles  */
+            display: flex;
+            /* para me coloque la dirrecion en columnas vertical  */
+            flex-direction: column;
+            /* me separa los elementos  */
+            justify-content: space-between;
+        }
+        .two-columns{
+            /* me pone los elementos uno al lado del otro de la caja  */
+            display: flex;
+            justify-content: space-between;
+
+        }
+        .fields{
+            display: flex;
+            flex-direction: column;
+        }
+        /* estilos a mis letras  */
+        label{
+            /* las cajitas me las separa de 10px pra que no se vea tan pegado  */
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            font-weight: 700;
+            color: #dedede;
+            font-size: 14px;
+
+
+        }
+        /* aplico esilos a mis input y tex aareas  */
+        input, textarea{
+            /* le quito el foondo  */
+            background: transparent;
+            /* le quitoo los bordes  */
+            border: none;
+            /* le pongo mis lineas ese borde  */
+            border-bottom: 2px solid rgba(255,255,255, 0.5);
+            /* pongo la cajta mas grande  */
+            padding: 10px;
+            color: #fff;
+            transition: all 0.3s;
+        }
+        input:focus, textarea:focus{
+            /* me quita esa linea  */
+            outline: none;
+        }
+
+        input:focus{
+            /* mi linea me la resalta en blanco  */
+            border-bottom: 2px solid rgba(255,255,255, 1);
+
+        }
+
+        textarea{
+            /* no voy a permitir que el usario me alargue y acorte mi ampo de entrada  */
+            resize: none;
+            border: 2px solid rgba(255,255,255, 0.5);
+            /* darle un tamaño a mi cajita */
+            flex-basis: 100px;
+            transition: all 0.3s;
+
+
+        }
+        textarea:focus{
+            border: 2px solid rgba(255,255,255, 1);
+
+        }
+        .btn{
+            display: flex;
+            /* ubiueme el boton en el centro */
+            justify-content: center;
+        }
+        button{
+            padding: 15px 40px;
+            /* le aplico 90 para darl transparancia  */
+            background: #1baea990;
+            border:none;
+            font-size: 15px;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #fff;
+            cursor: pointer;
+            transition: all 0.3s;
+
+        }
+        button:hover{
+            /* se vuelve mas grand el boton  */
+            padding: 15px 70px;
+            background: #1baea9;
+
+        }
+
+        
+     </style>
+</head>
+<body>
+     <form>
+		<div class="two-columns">
+			<div class="fields">
+				<label for="name">Nombre</label>
+				<input id="name" type="text" name="name" autocomplete="off"> 	
+			</div>
+			
+			<div class="fields">
+				<label for="lastname">Apellido</label>
+				<input id="lastname" type="text" name="lastname" autocomplete="off">	
+			</div>
+		</div>
+
+		<div class="two-columns">
+			<div class="fields">
+				<label for="tel">Telefono</label>
+				<input id="tel" type="text" name="tel" autocomplete="off">
+			</div>
+
+			<div class="fields">
+				<label for="email">Correo</label>
+				<input id="email" type="email" name="email" autocomplete="off">	
+			</div>
+		</div>
+		
+
+		<div class="fields">
+			<label for="coment">Comentarios</label>
+			<textarea id="coment"></textarea>
+		</div>
+
+		<div class="btn">
+			<button>Enviar</button>	
+		</div>
+	</form>
+</body>
+</html>
