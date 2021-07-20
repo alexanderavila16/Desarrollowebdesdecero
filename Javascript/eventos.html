@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eventos Js</title>
+  </head>
+  <body>
+
+    <a href="http://www.google.com" id="boton">mi enlace</a>
+    <!-- <button id="boton">click aqui</button> -->
+    <input id="input" type="text" />
+
+    <script>
+      //Eventos a boton
+
+    //   // funcion autoinvocada cuando yo realize un evento me va llamar
+    //    (function () {
+    //     var holamundo = function () {
+    //       console.log("hola mundo");
+    //     };
+
+    //     var boton = document.getElementById("boton");
+    //     /*    me permite es aplicar eventos a alguna accion y el
+    //         primer valor es la accion y el segundo es la funcion que queremos ejecutar
+    //         cuando se realize ese evento*/
+    //     boton.addEventListener("click", holamundo);
+    //   }()) 
+
+
+        //evento para Input
+        /* (function () {
+          var holamundo = function () {
+            console.log("mi input cambio");
+          };
+
+          var input = document.getElementById("input");
+         
+        //   el evento change me verifica si algo cambio en mi input 
+        //   input.addEventListener("change", holamundo);
+        
+        //va lanzar mi vnto cada vez que le doy una letra nueva
+          input.addEventListener("keypress", holamundo);
+        })() */
+    
+        //saberr el tipo de evento que tenemos
+        (function () {
+        var holamundo = function (e) {
+            // con type o target me determina que tipo de evento estoy ejecutando 
+        console.log("el eveto que se esta ejecutando es " + e.target);
+        // estoy haciendo que mi enlae la esoy desactivando y la paso como un evento que se ve en consola 
+          e.preventDefault();
+        };
+
+        var boton = document.getElementById("boton");
+        boton.addEventListener("click", holamundo);
+      }()) 
+
+
+
+
+    </script>
+  </body>
+</html>

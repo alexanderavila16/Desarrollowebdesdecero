@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Editar DOM JS</title>
+</head>
+<body>
+     <ol id="lista">
+          <li id="uno">Jorge Gabriel</li>
+          <li>Pedro Perez</li>
+     </ol>
+
+     <script>
+          //Editar contenido
+          var primerelemento = document.getElementById("uno");
+          
+               //Metodo1
+            //    puedo cambiar ese elemento
+                // primerelemento.innerHTML ="nuevo <i>elemento</i>";   // Toma en cuenta las etiquetas
+
+               //Metodo2
+            //    primerelemento.textContent = "nuevo elemento de texto" // No las toma en cuenta
+          
+
+
+          //Reemplazar elemento
+          var elemento = document.createElement("li");
+          var contenido = document.createTextNode("alexander avila");
+        //   incrutamos es contenido en mi elemnto 
+          elemento.appendChild(contenido);
+
+        //   llamamos ese contenedor donde vamos a incrustar ese contenido lista 
+          var contenedor = document.getElementById("lista");
+        //   le damos una pocision por los tag li en pocision 1 
+          var posicion = document.getElementsByTagName("li")[1];
+
+     
+        // remplazar al hijo el primero el quiero agregar y el segundo el que quiero remplazar 
+          contenedor.replaceChild(elemento, posicion);
+
+
+
+          //Eliminar elemento
+          contenedor.removeChild(posicion);
+        
+
+
+
+
+     </script>
+</body>
+</html>

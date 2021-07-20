@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom practica</title>
+</head>
+
+<style>
+    .container{
+        width: 200px;
+        height: 200px;
+        background: #26cfcf;
+    }
+
+    .grande{
+        width: 500px;
+        height: 500px;
+        background: #cf26c1 ;
+        transition:  all 0.5s;
+    }
+
+
+
+
+
+</style>
+
+
+
+
+
+<body>
+    <!-- esta no es manra correcta de onclick  -->
+    <button onclick="accion();">Cambio</button>
+    <br>
+    <div id="box" class="container"></div>
+    
+
+<script>
+
+    function accion(){
+        
+        var box = document.getElementById("box");
+        // si esta en la clase container aplique esto 
+        if(box.className == "container"){
+            // le aplicamos la clase container y grande 
+            box.className = "container grande";
+
+        }else{
+            box.className = "container";
+        }
+        
+    }
+
+
+
+
+</script>
+
+
+</body>
+</html>

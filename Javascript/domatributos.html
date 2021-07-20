@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Manejo de Atributos DOM JS</title>
+
+     <style>
+          div{
+			width: 400px;
+			height: 400px;
+			background: #7c7c7c;
+			display: inline-block;
+			margin: 10px;
+			border: 1px solid #AAAAAA;
+		}
+
+		.amarillo{
+			background: #ffd400;
+			border: 1px solid #000;
+		}
+
+		.verde{
+			background: #00dd73;
+			border: 1px solid #000;
+		}
+     </style>
+</head>
+<body>
+     <section id="contenedor">
+		<div id="elemento1"></div>
+		<div id="elemento2"></div>
+     </section>
+
+     <script>
+        //  va acceder al documento por mi id
+          var elemento1 = document.getElementById("elemento1");
+          var elemento2 = document.getElementById("elemento2");
+          
+         
+
+
+          //Metodo1
+        //   el tiene 2 valores mi atributo y el valor de ese atributo
+        // a ese elemento le va aplicar una clase llamada verde a mi div elemento 
+        //   elemento2.setAttribute("class", "verde");
+
+        elemento2.setAttribute("id", "Nuevoid");
+
+
+
+          //Metodo2
+        //   le aplico una clase amarillo a mi div elemento 1 
+          elemento1.className = "amarillo";
+        //   puedo crear otro id a mi div 
+          elemento1.id="otroid";
+
+        
+     </script>
+</body>
+</html>

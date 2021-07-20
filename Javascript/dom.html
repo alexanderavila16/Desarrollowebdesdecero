@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>DOM JS</title>
+</head>
+<body>
+     
+     <h1 id="titulo">Titulo de mi página web</h1>
+     <div id="subtitulo"></div>
+
+	<p class="miparrafo">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+
+	<p id="elemento">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+
+	<p class="miparrafo">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+
+     <script>
+          //Acceder a elementos con el DOM
+        // en mi diumento quiero acceder a todos los tag que sean parrafos p 
+          var parrafo = document.getElementsByTagName("p");
+        // acceda a todo el id que sea elemnto en mi parrafo 
+          var eleemento1 = document.getElementById("elemento");
+        // acceda a todo clase que es miparrafo 
+          var elementoClase = document.getElementsByClassName("miparrafo");
+
+
+
+          //Crear un nuevo nodo en el Dom
+			//1. Crear elemento
+            // puedo crear un parrafo un tiitulo un h3 
+                var nuevo = document.createElement("h3");
+               
+			
+               //2. Crear el contenido, le estaos creando el contenido
+                var contenido = document.createTextNode("este es mi nuevo elemento");
+             
+
+               //3. Juntar el elemento creado con el contenido, los juntamos o unimos
+                nuevo.appendChild(contenido);
+               
+
+            //4. Agregar nuevo elemento creado a mi documento
+            //    vamos incrustar mi contenido en el body 
+            //incrustamos mi h3 dentro de mi div
+               document.getElementById("subtitulo").appendChild(nuevo);
+
+
+               //5. Crear Atributos
+            //    estoy creandole una clase a mi subtitulo al elemento h3 
+               nuevo.setAttribute("class", "misubtitulo");
+               
+              
+
+
+     </script>
+
+
+</body>
+</html>

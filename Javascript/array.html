@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arreglos JS</title>
+</head>
+<body>
+    <script>
+    //DECLARAR ARREGLO
+    //                 0         1         2      3       4
+    var colores = ["amaarillo","verde","azul","rojo","gris"];
+
+
+    //METODOS MAS UTILIZADOS
+
+         //ACCEDER Y CAMBIAR ELEMENTOS DEL ARREGLO
+
+        // accedo laa pocision 4 y cambio el vaalor 
+         colores[4] ="negro";
+        // puedo crear nuevas valores en mi arreglo
+          colores[5]="purpura";
+          colores[6]="naranja";
+        // escribalo en el documento
+          document.write(colores);
+
+
+
+         //Metodo 1
+    // la longitud de ese arreglo 5 elementos serian
+       var longitudarreglo = colores.length;
+    //    crear un nuevo element de forma dinamica 
+       colores[longitudarreglo] = "pupol";
+    // lo escribo en mi documento para verlo s
+       document.write(colores);
+        
+              
+
+         //Metodo 2
+         //  los vas a empujar o colocar y lo vas a poner al final de ese arreglo
+        colores.push("rosa","blanco", "naranja");
+        document.write(colores);
+
+              
+
+         //ELIMINAR ELEMENTOS
+        // me elimina el utimo elemento 
+          colores.pop();
+          document.write(colores);
+
+             
+
+
+         //CONCATENAR ARREGLOS
+
+         var colores = ["amaarillo","verde","azul","rojo","gris"];
+         var colores2 = ["rosa","naranja","blanco","purpura"];
+
+
+         var colorestotal = colores.concat(colores2);
+         document.write(colorestotal);
+
+             
+    
+
+
+         //CAMBIAR ESTILO DE ARREGLO
+         var colores = ["amaarillo","verde","azul","rojo","gris"];
+        //  me va dividir los colores con un guion y mostrarlo mas bonito
+         var arrelomejordo = colores.join(" | ");
+
+         document.write(arrelomejordo);
+              
+
+
+         //ORDENAR ALFABETICAMENTE
+        
+         var arregloordenado = colores.sort();
+
+         document.write(arregloordenado);
+
+        </script>   
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Timers JS</title>
+</head>
+<body>
+     <script>
+         //Timeout
+        //  una funcion autoinvocada 
+     /*     (function(){
+            function holamundo() {
+                console.log("hola mundo");
+            }
+            // va tener dos valores mi funcion y mi delay y me laa muestra 1 vez
+            setTimeout(holamundo, 3000);
+         }())
+ */
+
+
+
+          //Interval
+          (function(){
+
+            var contador = 1;
+
+
+            function holamundo() {
+                contador++;
+                console.log(contador);
+
+                if(contador ==10){
+                    // va aborrar o detener ese setintrval
+                    clearInterval(repeticion);
+                }
+            }
+            // va tener dos valores mi funcion y mi tiempo y me ejecuta cada 2000 milisegundoos (2segundos)
+            var repetecion = setInterval(holamundo, 1000);
+         }())
+         
+
+
+
+       
+
+
+     </script>
+</body>
+</html>

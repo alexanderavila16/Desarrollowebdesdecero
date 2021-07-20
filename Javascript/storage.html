@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local storage y session stoorage</title>
+</head>
+<body>
+    <script>
+        //LocalStorage
+        //METODO1
+
+        localStorage.nombre = "alex avila";
+
+        // //METODO2
+        localStorage.setItem("nombre", "alex avila");
+
+        //MUESTRA EN PANTALLA esto lo guarrda en una minibase de datos dentro de la pc del usuario
+        document.write(localStorage.nombre);
+
+        //eliminar elemento
+        localStorage.removeItem("nombre");
+
+        //SESSIONSTORAGE se guarda por sesion es as volatiil y menos fuerte que localstorage
+        sessionStorage.nombre = "alex avila";
+        document.write(sessionStorage.nombre);
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

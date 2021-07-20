@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear elemento enn el Dom JS</title>
+</head>
+<body>
+
+    <ol id="lista">
+        <li>Elemennto n1</li>
+        <li>Elemennto n2</li>
+        
+    </ol>
+
+
+    <script>
+        //creamos nuestro elemento
+        var lista = document.createElement("li");
+        // asignamos un contenido a ese elemento 
+        var contenido = document.createTextNode("Elemento n3");
+        // lo incrustamos en mi html lista
+        lista.appendChild(contenido);
+
+        //Metodo 1
+        // accede este elemento lista
+      /*   var contenedor = document.getElementById("lista");
+        // en ese contenedor vas a introducir ese nuevo elemento lista que introduci 
+        contenedor.appendChild(lista); */
+
+        //metodo 2
+        // accede a todos los elementos coon mi tag li y accede a este nodo padre
+  /*       var contenedor = document.getElementsByTagName("li")[0].parentNode;
+        contenedor.appendChild(lista); */
+
+        //metodo 3
+
+        var contenedor = document.getElementsByTagName("li")[0].parentNode;
+        // quiero pocisionar este elemento en el 1
+        var pocision = document.getElementsByTagName("li")[1];
+        // donde quiero insertarlo y en que pocision 
+        contenedor.insertBefore(lista, pocision)
+
+
+
+
+    </script>
+    
+</body>
+</html>

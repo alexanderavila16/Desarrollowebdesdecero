@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>funciones</title>
+</head>
+<body>
+    <script>
+        //primero es mi nombre luego los parametros en ()
+        //una funcion es un codigo que puedo reutilizar, que deba retonar un valor y deba ejecutar una accion
+     /*    function holamundo(){
+            //instruciones
+            document.write("hola mundo");
+
+        }
+        /*   // yo llamo mi funcion 
+            holamundo(); */
+        
+
+    /*     var resta = function(valor1, valor2){
+           var resultado =   valor1 - valor2;
+        
+        //voy a devolver este resultado para
+           return resultado;
+
+        }
+
+        document.write( resta(70, 30) ); */
+
+        var resta = function (valor1, valor2){
+               var resultado = valor1 - valor2;
+               return resultado;
+          }
+
+          document.write( resta(100, 30) );
+          
+
+
+          //Variable Global est fuera de las funciones y puedo utlizarla en todas mis funciones
+          var variableGlobal = "Hola mundo";
+
+
+
+          var valorMinimo = function (valor1, valor2) {
+               //Variable Local esta dentro de mis funciones solo esta disponible para esta funcion
+               var variableLocal = "Esto es una variable local";
+
+              if (valor1 < valor2) {
+                   return valor1;
+              } else{
+                   return valor2
+              }
+          }
+
+          document.write(valorMinimo(100,80));
+          document.write("<br>");
+          document.write(valorMinimo(50,20));
+          document.write("<br>");
+          document.write(valorMinimo(60,90));
+
+
+
+    
+
+
+    </script>
+</body>
+</html>
