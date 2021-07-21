@@ -1,0 +1,551 @@
+/* VARIABLES */
+:root{
+     /* mi codigo de color primario que usaremos despues una variable */
+    --color-primario: #FCB03B;
+    --color-secundario: #E92F3D;
+    --color-backgroud-sombra: #E92F3D30;
+    /* color de fondo  */
+    --color-background: #EFF6F5;
+    --color-texto: #A1A5A6;
+    --text-defaul: 'Open Sans';
+}
+
+
+/* GENERALES */
+*{
+    /* seteamos la pagina  */
+    margin: 0;
+    padding: 0;
+    /* para que respete el tamaño que yo le indique */
+    box-sizing: border-box;
+    font-family: var(--text-defaul);
+}
+
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+     /* le aplico mi fondo  */
+    background: var(--color-background);
+}
+
+.titulos{
+    font-size: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    /* negrilla */
+    font-weight: 600;
+}
+
+.subtitulos{
+    font-size: 25px;
+    font-weight: 400;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--color-primario);
+}
+
+.btn{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #FFF;
+    background: var(--color-primario);
+    font-weight: 700;
+    /* esta pegado entonces le damos espacio al boton  */
+    padding: 15px 30px;
+    /* le quito la linea de afera ese borde  */
+    outline: none;
+    border: 2px solid var(--color-primario);
+    cursor: pointer;
+      /* me va prmitir que yo quiera los pixeles quee se separen  */
+    position: relative;
+    /* arriba se va separa 20px */
+    top: 20px;
+    transition: all 0.3s;
+}
+
+.btn span{
+    /* separo ese icono del text del boton  */
+    padding-left: 10px;
+}
+
+.btn:hover{
+    /* 15px arriba y abajo y 45 a los lados  */
+    padding: 15px 45px;
+}
+
+
+
+
+/* MENU PRINCIPAL */
+.menu-principal{
+    /* un ancho de 100 para que ocupe toda mi pantalla  */
+    width: 100%;
+    /* paara que me lo acomode uno al lado del otro  */
+    display: flex;
+    /* me de un espacio entre elementoos */
+    justify-content: space-between;
+    align-items: center;
+    height: 75px;
+    padding: 0 30px;
+    margin-top: 10px;
+    background: var(--color-background);
+    /* zindex es cuando le digo 1 va estar una capa mas adelante es mas cerca */
+    z-index: 1;
+}
+
+.logo img{
+    /* disminuyo mi imagen  */
+    width: 130px;
+    cursor: pointer;
+}
+
+.menu-bar{
+    /* paara que me lo acomode uno al lado del otro  */
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.menu-bar .enlaces ul li{
+    /* para que me aparesca uno al lado del otro  */
+    display: inline-block;
+       /* separams uno al lado del otro */
+    padding: 0 10px;
+}
+
+.menu-bar .enlaces ul li a{
+    font-size: 14px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--color-texto);
+    font-weight: 600;
+    /* cuurentcolor es el color por defeto  */
+    background: linear-gradient(currentColor, currentColor);
+    /* va teer un tamaño en x y y  de 100 */
+    background-position: 100% 100%;
+    /* no se va reptir y al darle no repeat me crea una linea */
+    background-repeat: no-repeat;
+    /* va tener un tamaño de 2px */
+    background-size: 0% 2px;
+      /* una trancision para utilizarlo con el hover */
+    transition: all 0.5s;
+}
+
+.menu-bar .enlaces ul li a:hover{
+    color: var(--color-secundario);
+      /* cambio el tamaño a mi background 50% es mi linea y 2px tmmañño  */
+    background-size: 50% 2px;
+}
+
+
+.menu-bar .sociales a{
+    font-size: 16px;
+    text-transform: uppercase;
+    padding: 0 10px;
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--color-texto);
+    transition: all 0.5s;
+}
+
+.menu-bar .sociales a:hover{
+    color: var(--color-secundario);
+}
+/* menu hamburguesa */
+.menu-principal i{
+    cursor: pointer;
+    color: var(--color-texto);
+    font-size: 30px;
+    /* que siempre me aparesca a la derecha est menu hamburguesa */
+    float: right;
+    /* no se van a mostrar  */
+    display: none;
+    transition: all 0.5s;
+}
+
+.menu-principal i:hover{
+    color: var(--color-secundario);
+}
+
+
+/* SLIDER DE PRODUCTOS  */
+#menu-productos .contenedor-principal{
+    /* flexbox */
+    display: flex;
+    /* alineo en el ccentro  */
+    align-items: center;
+    /* para que pueda movrlo como quiero  */
+    position: relative;
+    /* para que trunque con mi menu  */
+    z-index: 0;
+}
+
+.contenedor-principal #btn-izquierda,
+.contenedor-principal #btn-derecha{
+    /* le pongo estilos a mis botones para pasar izquirda o drecha  */
+    position: absolute;
+    height: 10%;
+    width: 50px;
+    /* le quito los bordes  */
+    border:none;
+    background:transparent ;
+    cursor: pointer;
+    font-size: 40px;
+    /* lo corro a la izquierda */
+    margin: 0 15px;
+    color: var(--color-secundario);
+    /* lo pongo adelante de todo ese contenido de mi pizzas  */
+    z-index: 500;
+    outline: none;
+    transition: all 0.3s;
+
+
+}
+.contenedor-principal #btn-izquierda:hover,
+.contenedor-principal #btn-derecha:hover{
+    /* 30 como opaco  */
+    background: var(--color-backgroud-sombra);
+    /* me lo transforma e y  */
+    transform: translateY(5px);
+
+
+
+}
+/* los muevo de un lado al otro con ese pocision absolute voy poder moverlo donde quiera  */
+.contenedor-principal #btn-izquierda{
+    left: 0;
+}
+
+.contenedor-principal #btn-derecha{
+    right: 0;
+}
+
+.slider{
+    /* me aparece todos mis elements uno al lado del otro  */
+    display: flex;
+    /* le esttoy quitando el overflow ese scroll no me vaa aparecer me lo va ocultar  */
+    overflow: hidden;
+    /* el vieport height calc es calculo 100 el ancho de mi pantalla menos 80px */
+    height: calc(100vh - 80px);
+    /* me permie saber desctetar ese scroll me hace esa leve animacion  */
+    scroll-behavior: smooth;
+}
+
+.container-productos{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* qu tenga un tamaño base de 100%  */
+     flex-basis: 100%;
+    /* todos van a tener un mismo tamaño los tengo separados en fila  */
+    flex-shrink: 0 ;
+
+}
+.descripcion-productos{
+    width: 30%;
+}
+
+.descripcion-productos h1{
+    /* viewport height que  cuando disminuye la pantalla vaya calculando  */
+    font-size: 5vw;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.descripcion-productos h2{
+    text-transform: lowercase;
+    font-size: 2.2vw;
+    font-weight: 100;
+}
+
+.descripcion-productos p{
+    color: var(--color-texto);
+    font-style: italic;
+    text-align: justify;
+}
+
+.imagen-productos{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+
+}
+
+.imagen-productos img{
+    width: 100%;
+    /* cuamdo pase el cursos abajo con hover me escale  */
+    transform: scale(1.1);
+    transition: all 0.3s;
+}
+
+.container-productos:hover .imagen-productos img{
+    /* cuamdo pase el cursos abajo con hover me escale  */
+    transform: scale(1.15);
+}
+
+
+/* SECCION SERVICIOS  */
+#servicios{
+    /* para que ocupe un ancho completo de mi pagina  */
+    height: 100vh;
+    background: #FFF;
+    /* para que no se va tan pegado a los lados  */
+    padding: 40px;
+}
+.servicios-titulos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* vamos a utilizar grid layout  */
+.servicios-container{
+    /* un espacio arriba  */
+    margin-top: 30px;
+    /* quiero que se vea en grid  */
+    display: grid;
+    /* vamos a crear un grid dee 3 columnas  */
+    grid-template-columns: repeat(3, 1fr) ;
+    /* vamos a crear un grid de 2 filas  */
+    grid-template-rows: repeat(2, auto);
+    /* para que no sea todo junto le doy un espacion entre ellos */
+    grid-gap: 30px;
+    /* yo puedo ser arifice de lo que quiero,
+    quiero que en la primera fila me aparezca, 1 columna ingredintes en la 2 imagen y la 3 rapidez
+     */
+    grid-template-areas: "ingredientes  imagen   rapidez"
+                         "calidad        imagen  delivery";
+
+
+}
+
+.calidad{
+    grid-row: calidad;
+    grid-column: calidad;
+}
+.ingredientes{
+    grid-row: ingredientes;
+    grid-column: ingredientes;
+}
+.rapidez{
+    grid-row: rapidez;
+    grid-column: rapidez;;
+}
+.delivery{
+    grid-row: delivery;
+    grid-column: delivery;
+}
+
+.imagen-central{
+    grid-row: imagen;
+    grid-column: imagen;
+    transition: all 0.5s;
+}
+
+.imagen-central:hover{
+    transform: scale(1.2);
+}
+
+.items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.items span{
+    width: 95px;
+    font-size: 40px;
+    color: var(--color-secundario);
+    padding: 20px;
+    border: 5px double #dedede;
+    /* le aplico un estilo como un circulo  */
+    border-radius: 50%;
+    transition: all 0.5s;
+}
+
+.items span:hover{
+    background: var(--color-secundario);
+    color: #fff;
+}
+
+.ingredientes span, .calidad span {
+    /* le cambiaamos de color aal icono  */
+    color: var(--color-primario);
+
+}
+
+.ingredientes span:hover, .calidad span:hover {
+    background: var(--color-primario) ;
+    color: #ffff
+
+
+}
+
+.items .titulo-item{
+    /* le camio el estilo como a mis ingredientes calidad etc  */
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 700;
+    text-align: center;
+
+
+}
+
+.items .text-item{
+    font-size: 14px;
+    color: var(--color-texto);
+    text-align: center;
+    font-style: italic;
+    padding: 0 20px;
+
+}
+
+
+
+
+
+
+
+/* MEDIA QUERYS  */
+@media screen and (max-width: 850px){
+    /* SLIDER DE PRODUCTOS */
+    .container-productos{
+        /* lo pongo en columnas  */
+        flex-direction: column;
+
+    }
+
+    .descripcion-productos{
+        /* ancho de 70% pa que e texto se vea mas grande  */
+        width: 70%;
+        /* este pasa abajo y la imagen en la pocision 0 */
+        order: 1;
+
+
+    }
+
+    .descripcion-productos .btn{
+        padding: 10px 20px;
+
+    }
+
+    .descripcion-productos .btn:hover{
+        padding: 10px 30px;
+
+    }
+
+    /* SECCION SERVICIOS  */
+    .servicios-container{
+        /* espacio arriba  */
+        margin-top: 50px ;
+        grid-template-columns: repeat(2, 1fr);
+        /* mee trae solo mis 2  columnas  */
+        grid-template-areas: "ingredientes  rapidez"
+                             "calidad       delivery";
+    }
+
+    .imagen-central{
+        display: none;
+    }
+
+    
+
+  
+}
+
+
+
+
+
+
+
+
+
+/* responsive y que cuando llegue a 650px mi menu haga esto */
+@media screen and (max-width: 650px){
+    /* MENU PRINCIPAL */
+    .menu-principal{
+         position: fixed;
+         top: 0;
+         /* le quitamos ese margen  */
+         margin-top: 0;
+    }
+
+    .menu-principal i{
+        /* me muestra en bloque */
+         display: block;
+    }
+
+    .menu-bar{
+        /* el tiene el flexbox y le doy un espacio etre ellos  */
+         justify-content: space-around;
+         align-items: center;
+         /* quiero que mi menu apareca uno arriba del otro en columna  */
+         flex-direction: column;
+         /* quiro que me aparesca en toda la panntalla  */
+         width: 100%;
+         height: 100vh;
+         position: fixed;
+         right: 0;
+         top: 0;
+            /* siempre me aseguro que este por delante de todos mis elementos  */
+         z-index: 1000;
+         background: #333;
+         transition: all 1s;
+          /* lo translado a mi menu en  x */
+         transform: translateX(100%);
+    }
+
+    .menu-bar.active{
+         /* me quita el efecto quitando mi menu me lo translada el ancho completo */
+         transform: translateX(0%);
+    }
+
+    .menu-bar i{
+         position: absolute;
+         right: 50px;
+         top: 50px;
+    }
+
+    .menu-bar .enlaces ul li{
+         display: block;
+         padding: 20px 10px;
+         text-align: center;
+    }
+ /* a mis enlaces y a mis sociales  */
+    .menu-bar .enlaces ul li a,
+    .menu-bar .sociales a{
+         font-size: 20px;
+    }
+
+    /* SLIDER PRODUCTOS  */
+    .slider{
+        height: calc(100vh -0);
+    }
+
+
+    .imagen-productos{
+        /* ancho la imagen  */
+        width: 65%;
+    }
+
+    .descripcion-productos h1{
+        font-size: 7vw;
+
+    }
+
+    .descripcion-productos h2{
+        font-size: 3vw;
+        
+    }
+
+    
+}
