@@ -23,6 +23,7 @@
 
 
 html{
+    /* lo hace una transicion cuando le doy a un enlace como servicios o contacto en mi pagina web  */
     scroll-behavior: smooth;
 }
 
@@ -409,6 +410,462 @@ body{
 }
 
 
+/* SECCION DE EQUIPO  */
+
+#equipo {
+    /* que ocupe un ancho completo de mi pantalla  */
+    height: 100vh;
+    display: flex;
+
+}
+
+.persona {
+    /* todas esas cajitas tienen 1  un tamaño estandar a cada contenedor*/
+    flex-grow: 1;
+    overflow: hidden;
+    /* si yo tengo mi padre con position relative puedo hacer a mis hijo
+    con position absolute y puedo movr como quiera esas cajitas  */
+    position: relative;
+    transition: all 0.5s;
+}
+
+.persona:hover{
+    flex-grow: 3;
+}
+
+.persona-imagen{
+    /* un ancho del 100% */
+    height: 100%;
+/* mis hijo respcto arriba con mi relative */
+    position: absolute;
+
+    left: 50%;
+    /* lo corro mis imagenes a la izquierda  */
+    transform: translateX(-50%);
+    /* le pongo un filtro  */
+    filter: grayscale(80%);
+}
+
+/* cuando este hover quiero que mi imagen tenga color  */
+.persona:hover .persona-imagen{
+    filter: grayscale(0%);
+}
+
+.persona-info{
+    /* absolute para mover mis iconos como quiera  */
+    position: absolute;
+    /* bottom para llevar mis iconos abajo  */
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+    /* le quito todos mis elementos y cuanndo haaga hover aparecera
+    abajo le damos hover */
+    opacity: 0;
+    transition: all 0.1s;
+}
+
+/* cuando pase el hover por persona le va quitar la opacidad
+y me va mostrar todo */
+.persona:hover .persona-info{
+    opacity: 1;
+    /* el viene d 10px y con 60px va hacia arriba
+    da esa sensacion que sube cuando paso por el */
+    bottom: 60px;
+    transition-delay: 0.3s;
+}
+
+
+.persona-info h2{
+    font-size: 30px;
+    color: #000;
+    font-weight: 600;
+    /* aplicarle sombra a mi texto 2 ejex y 2 eje y , y 3 de difuminado  */
+    text-shadow: 2px 2px 3px rgba(0,0, 0, 0.5);
+}
+
+.persona-info p{
+    color: var(--color-secundario);
+    font-size: 20px;
+    font-weight: 700;
+    font-style: italic;
+    /* para separarlo de mi titulo  */
+    margin-top: 8px;
+    /* para seprarlo de mis icono  */
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 3px rgba(255,0, 0, 0.5);
+}
+
+.social-media a{
+    /* para que aparezca uno al lado del otro  */
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    color: #fff;
+    background: var(--color-secundario);
+    /* asi puedo centrar mis iconos como 
+    tiene el mismo tamaño de mi contenedor */
+    line-height: 40px;
+    /* le dooy un estilo circular  */
+    border-radius: 50%;
+    margin: 0 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.social-media a:hover{
+    color: var(--color-secundario);
+    background: transparent;
+    /* le quito el color roja a blanco y lo escalo
+    me da ese efecto buenno a mis iconos sociales */
+     transform: scale(2);
+
+}
+/* TERMINA SECCION DE EQUIPO  */
+
+
+/* SECCION DE INGREDIENTES  */
+
+#ingredientes{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.ingre{
+
+    flex-grow: 1;
+    overflow: hidden;
+    position: relative;
+    /* para que se vea mas pequeño  */
+    height: 250px;
+}
+
+.imagen-ingre{
+
+    position: absolute;
+    /* para ubicar is imgenes 100% */
+    height: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.info-ingre{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* con ancho y alto lo ubico en la mitad  */
+    width: 100%;
+    height: 100%;
+    /* le pongo una opacidad a mi imagen  */
+    background: rgba(0,0, 0, 0.5);
+    transition: all 0.3s;
+}
+
+.info-ingre p{
+    font-size: 28px;
+    color: #fff;
+    font-weight: 600;
+    transition: all 0.3s;
+
+}
+
+.info-ingre:hover{
+    /* pongo mas clara mi imaggen  */
+    background: rgba(0,0, 0, 0.25);
+
+}
+
+.info-ingre:hover p{
+    transform: translateY(10px);
+}
+
+
+
+/* SECCION CONTACTO  */
+#contacto{
+    height: 100vh;
+    padding: 60px;
+    position: relative;
+}
+
+#formulario{
+    width: 70%;
+    margin: 50px auto;
+}
+
+.two-fiels{
+    display: flex;
+    justify-content: space-between;
+}
+
+.input-text, .input-email, .textarea{
+    border: 1px solid #b4b4b4;
+    color: #888;
+    background: #fff;
+    outline: none;
+    padding: 15px 60px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    transition: all 0.5s;
+}
+
+.textarea{
+    width: 100%;
+    height: 150px;
+    /* que no pueda modificar mi cajita de mensajes  */
+    resize: none;
+
+
+}
+
+.input-text, .input-email{
+    width: 100%;
+
+}
+
+.inputconicon{
+    /* como contenedor padre  */
+    position: relative;
+    /* me deja espacio entre ellos  */
+    width: 48%;
+}
+
+.inputconicon i{
+    position: absolute;
+    left: 0;
+    padding: 16px 15px;
+    background: #888;
+    color: #fff;
+    transition: all 0.5s;
+
+}
+
+.textareaicon {
+    width: 100%;
+}
+
+.textareaicon i{
+    background: transparent;
+    color: #888;
+    padding: 0;
+    font-size: 25px;
+    left: 17px;
+    top: 13px;
+    transition: all 0.5s;
+}
+
+/* cuando seleccion se pone amarillo  */
+.inputconicon input:focus,
+.inputconicon textarea:focus{
+    border: 1px solid var(--color-primario) ;
+
+}
+
+/* cuando mi input este focus le agregar mas a mis iconos  */
+.inputconicon input:focus + i{
+    background: var(--color-primario);
+}
+
+/* cuando mi input este focus le agregar mas a mis iconos y cambie de color  */
+.inputconicon textarea:focus + i{
+    color: var(--color-primario);
+}
+
+/* pongo al final mi boton  */
+.fields-btn{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.btn-input{
+    padding: 15px 50px;
+}
+
+.btn-input:hover{
+    padding: 15px 65px;
+
+}
+
+
+/* ALERTAS  */
+.alertas{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.alert{
+    width: 60%;
+    padding: 20px 60px ;
+    /* me lo sube arriba mi alerta fijo  */
+    position: fixed;
+    top: 0;
+    transition: all 0.5s;
+}
+
+/* si me muuestra la alerta  */
+.alert.show{
+    transform: translateY(50%);
+}
+
+/* me oculta la alerta */
+.alert.hide{
+    transform: translateY(-100%);
+
+}
+
+
+
+.alert .icono-alert{
+    position: absolute;
+    left: 20px;
+    top: 50px;
+    transform: translateY(-100%);
+    font-size: 30px;
+}
+
+.alert .msg{
+    padding: 0 20px;
+    font-size: 18px;
+}
+
+#alerterror{
+    background: #f8d7da;
+    border-right: 4px solid #da3748;
+}
+
+#alerterror .icono-alert{
+    color: #da3748;
+}
+
+#alerterror .msg{
+    color: #721c24;
+}
+
+#alertsucces{
+    background: #d4edda;
+    border-right: 4px solid #279e43;
+}
+
+#alertsucces .icono-alert{
+    color: #279e43;
+}
+
+#alertsucces .msg{
+    color: #155724;
+}
+
+
+
+/* FOOTER  */
+
+footer{
+    /* me o ponga uno al lado del otro  */
+    display: flex;
+    margin-top: -70px;
+   
+}
+
+.sociales-metodo{
+    width: 25%;
+    height: 100px;
+    background: #333;
+    color: #fff;
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+}
+
+.sociales-metodo i{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 30px;
+    /* centrar mi coontenido abajo  */
+    line-height: 100px;
+    transition: all 0.5s;
+}
+
+.sociales-metodo span{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    /* pongo abajo estos elementoos  */
+    bottom: 0;
+    padding: 10px 0;
+    font-size: 12px;
+    background: var(--color-primario);
+    color: #fff;
+    letter-spacing: 1px;
+    font-weight: 700;
+    /* lo muevo haciia abaj  */
+    transform: translateY(100%);
+    transition: all 0.5;
+}
+
+.sociales-metodo i:hover + span{
+    transform: translateY(0px);
+
+}
+
+.sociales-metodo i:hover{
+    transform: translateY(-20px);
+}
+
+
+/* BOTON DE IR ARRIBA  */
+#btn-top{
+    width: 50px;
+    height: 50px;
+    background: var(--color-primario);
+    cursor: pointer;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    /* que este encima de cualquier elemnto  */
+    z-index: 1;
+    /* mi elemento no aparecon abajo con show aparcera  y 
+    lo hare con javascript */
+    transform:translateY(200%);
+    transition: all 0.5s;
+}
+
+#btn-top.show{
+    transform: translateY(0);
+}
+
+#btn-top.scrollfinal{
+    transform: translateY(-250%);
+}
+
+#btn-top span{
+    color: #fff;
+    font-size: 25px;
+    width: 100%;
+    text-align: center;
+    line-height: 50px;
+    transition: all 0.5s;
+
+}
+
+#btn-top:hover{
+    background: #d89127;
+}
+
+#btn-top:hover span{
+    transform: translateY(-3px);
+}
+
+
+
+
+
 
 
 
@@ -452,9 +909,10 @@ body{
                              "calidad       delivery";
     }
 
+  
     .imagen-central{
         display: none;
-    }
+   }
 
     
 
@@ -471,6 +929,7 @@ body{
 
 /* responsive y que cuando llegue a 650px mi menu haga esto */
 @media screen and (max-width: 650px){
+
     /* MENU PRINCIPAL */
     .menu-principal{
          position: fixed;
@@ -547,5 +1006,55 @@ body{
         
     }
 
+    /* INGREDIENTES */
+
+    .info-ingre .txt-ingre{
+        /* cuando llgue a 650px no se va mostrar mi texto  */
+        display: none;
+    }
+
+
+    /* CONTACTOS  */
+    #formulario{
+        width: 100%;
+    }
+
+    .two-fiels{
+        /* pongamole en columna  */
+        flex-direction: column;
+    }
+
+    .inputconicon{
+        width: 100%;
+    }
+
+
+    /* ALERTAS  */
+    .alert{
+        width: 100%;
+
+    }
+
+    .alert.show{
+        /* para que baje un poco mas la alrta  */
+        transform: translateY(150%) ;
+    }
+
+    /* FOOTER  */
+
+    footer{
+        flex-wrap: wrap;
+        margin-top: 60px;
+    }
+
+    .sociales-metodo{
+        width: 50%;
+    }
+
+
+    /* BOTON DE IR ARRIBA  */
+    #btn-top{
+        display: none;
+    }
     
 }
